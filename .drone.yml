@@ -7,4 +7,5 @@ pipeline:
     repo: nginx:alpine
     container: nginx-f77c94bf5-ccjtw
     namespace: default
-    tag: latest              
+    tag: latest
+#1              
