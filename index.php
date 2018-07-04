@@ -19,6 +19,6 @@
 <body>
 	<img id="logo" src="logo.png" />
 	<h1 style="color:red;"> Hello Osones </h1>
-	<?php if($_ENV["HOSTNAME"]) {?><h3>My hostname is <?php echo $_ENV["HOSTNAME"]; ?></h3><?php } ?>
+	<?php if($_ENV["HOSTNAME"]) {?><h3>sanjay<?php echo $_ENV["HOSTNAME"]; ?></h3><?php } ?>
 		</body>
 </html>
