@@ -16,7 +16,7 @@ resources:
   - name: docker-demo
     type: docker-image
     source:
-      repository: osones/demo-cicd
+      repository: sanjay505/python4
       username: sanjay505
       password: saixu110
   - name: k8s
