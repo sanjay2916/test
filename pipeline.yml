@@ -13,33 +13,18 @@ resources:
       branch: master
       username: sanjay2916
       password: Saixu110
-  - name: docker-demo
-    type: docker-image
-    source:
-      repository: sanjay505/python4
-      username: sanjay505
-      password: saixu110
   - name: k8s
     type: kubernetes
-    source:
-      kubeconfig: /home/ubuntu/.kube/config
+    server: https://api-test-k8s-local-7afed8-1602461975.ap-south-1.elb.amazonaws.com
+    namespace: default
+    resource_type: deployment
+    token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6ImRlZmF1bHQtdG9rZW4tbG10cWYiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoiZGVmYXVsdCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6Ijc3MDRkNTc5LTdmNmUtMTFlOC05ZDFmLTAyZDY3YjI2OGY5YSIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDpkZWZhdWx0OmRlZmF1bHQifQ.WGDBBRbG5WMelyEDh4KYsh-4qJJzACMoMjHQSqChEKPXWX9d9VB_4s4E9Aq_8TPo6S357w83QPtxZTRkh7bwBp4t-eLbfMGmA-64XHXpQ-wmS6nQuqCyhAt5sQmjWf0A5QCQjeddd_hTuUygejwEqyJEIykVsPsPXvRz5rHc-9tCkRn-YaIpEfzK3A1B3px-6re7JSZVxl5vPifuD5vODRTjs9o_3qh7ZgGPFdKYNFoUT-BwZ5B9ewoC0SErJgeBfPvomGcncJoWbM087T4znv9f9nj_Z7-36L6WzcfHqKgwb1C5CS7x5tB5R89Vize9XpBn1j3ZKW85-osCskRXfA
+    certificate_authority: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMrekNDQWVPZ0F3SUJBZ0lNRlR1Z2tkWHl4WWtnWm85YU1BMEdDU3FHU0liM0RRRUJDd1VBTUJVeEV6QVIKQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13SGhjTk1UZ3dOakkwTURZd05EQTJXaGNOTWpnd05qSXpNRFl3TkRBMgpXakFyTVJjd0ZRWURWUVFLRXc1emVYTjBaVzA2YldGemRHVnljekVRTUE0R0ExVUVBeE1IYTNWaVpXTm1aekNDCkFTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTmNDS2JwMnljNDN3MGRPYWhmWVRPS3AKaUVpcm5EaTZBYVorRFFsQy90S3pjM053RCtzM0NiSjB3SERNdWlobmtZMUlrS05UYXViY29OblhkQk1XRWQ2cApEWTdZZHlzeTN0Y2UxVUtVc0w5WU12SUpxZEcrWWlpdXMzaCtTbkRXWjM0cE5PQndCZnVjY2dSd1lyTUJaNnZ5Cm5KTWs5eklOYUN1TGdNK0dOUldsc2phbE5nNHpES1F5ZzhFVTh1WW1DWE1pYTN5MUI1RlQyeWordXpwUm9yamUKcXlrZjhnTnhOalZveGp0VkJMM21TRHYveHp5bDE0OUt3SHZzUzNyS1I4ZGhQdkF3eitNWk5lelBkNmpacTVZZgpPWUpMWjV1QXArTWJkbzlDVnVaT3hPZUUrRkRzRmtaRGxaZ0JCTXZaUWRCTzFUdjNEVG4yMGZ3UzBEb24xdWtDCkF3RUFBYU0xTURNd0RnWURWUjBQQVFIL0JBUURBZ2VBTUJNR0ExVWRKUVFNTUFvR0NDc0dBUVVGQndNQ01Bd0cKQTFVZEV3RUIvd1FDTUFBd0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFIeWdyRkNMM0puZDZxdDJjWUxBRDJaVQppMHRuK3VaMnJmR016cXcxd1hoUElaeWREa1dHcXFwMnR1SmFqQ0k3S3FwNzNnZS9kN0FUbHk5REpQREI5UllnCkdWTjlXU2IwYlZSUkRadHlPRWttN3dYM0JhUkc4dVU5MWhudTJsMDRDYloxUTNJcXpPOXV5OFNhOU8rNFRURlMKRWJNSlllUWFvazdxbXk2OTZrTS9MOHFoRTh3SXluUVNGUzBIeXI5a29naW5iZ0dGNk1WcGJwYm1TNGM5RUdlMgpHY3ArYXdRL2tWSlVpZy9uaTJoQWpZUGlLL2hUSk1WQkF3Wlk5R0RGMjF3WlUrL01CaW1uVWNMU0dpaGNLeXhrClBRMlJsSkZtM2s1bXZpclFObVVqc1N3cVdQcExNQndiWTQ2ZHdXWVJtN1I0ZGpjWGcwYzhNSkFEd0xiRmxQZz0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
 jobs:
-  - name: "Docker-Build"
-    public: false
+  - name: "Build"
     plan:
       - get: git-demo
         trigger: true
-      - put: docker-demo
-        params:
-          build: git-demo
-  - name: "Deploy Application"
-    public: false
-    plan:
-      - get: docker-demo
-        trigger: true
-        passed:
-          - "Docker-Build"
-      - put: k8s
-        params:
-          kubectl: delete pods -l app=demo-cicd
-          wait_until_ready: 300
+    - put: k8s
+      params:
+        spec_path: nginx.yml
