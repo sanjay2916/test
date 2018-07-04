@@ -1,0 +1,43 @@
+resource_types:
+- name: kubernetes
+  type: docker-image
+  source:
+    repository: zlabjp/kubernetes-resource
+    tag: "1.9"
+
+resources:
+  - name: git-demo
+    type: git
+    source:
+      uri: https://github.com/osones/demo-cicd
+      branch: master
+  - name: docker-demo
+    type: docker-image
+    source:
+      repository: osones/demo-cicd
+      username: sanjay505
+      password: saixu110
+  - name: k8s
+    type: kubernetes
+    source:
+      kubeconfig: /home/ubuntu/.kube/config
+jobs:
+  - name: "Docker-Build"
+    public: false
+    plan:
+      - get: git-demo
+        trigger: true
+      - put: docker-demo
+        params:
+          build: git-demo
+  - name: "Deploy Application"
+    public: false
+    plan:
+      - get: docker-demo
+        trigger: true
+        passed:
+          - "Docker-Build"
+      - put: k8s
+        params:
+          kubectl: delete pods -l app=demo-cicd
+          wait_until_ready: 300
