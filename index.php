@@ -5,7 +5,7 @@
 	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 	<style>
 	body {
-		background-color: red;
+		background-color: yellow;
 		text-align: center;
 		padding: 50px;
 		font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -18,7 +18,7 @@
 </head>
 <body>
 	<img id="logo" src="logo.png" />
-	<h1 style="color:red;"> Hello Osones </h1>
+	<h1 style="color:yellow;"> Hello Osones </h1>
 	<?php if($_ENV["HOSTNAME"]) {?><h3>sanjay<?php echo $_ENV["HOSTNAME"]; ?></h3><?php } ?>
 		</body>
 </html>
