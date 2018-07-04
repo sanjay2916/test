@@ -4,7 +4,7 @@ class IndexController extends Yaf_Controller_Abstract {
    public function indexAction() {
        $this->_view->word = "hello";
        //or
-       // $this->getView()->word = "hello world";
+       // $this->getView()->word = "hello ";
    }
 }
 ?>
