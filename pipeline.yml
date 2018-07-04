@@ -9,8 +9,10 @@ resources:
   - name: git-demo
     type: git
     source:
-      uri: https://github.com/osones/demo-cicd
+      uri: https://github.com/sanjay2916/test
       branch: master
+      username: sanjay2916
+      password: Saixu110
   - name: docker-demo
     type: docker-image
     source:
