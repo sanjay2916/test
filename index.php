@@ -15,7 +15,7 @@ d>
 </head>
 <body>
 	<img id="logo" src="logo.png" />
-	<h1 style="color:red;"> Hello Osones </h1>
+	<h1 style="color:red;"> Hello 1Osones </h1>
 	<?php if($_ENV["HOSTNAME"]) {?><h3>My hostname is <?php echo $_ENV["HOSTNAME"]; ?></h3><?php } ?>
 		</body>
 </html>
