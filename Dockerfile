@@ -140,7 +140,7 @@ RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY nginx.conf /etc/nginx/sanjay.txt
 COPY nginx.vh.default.conf /etc/nginx/conf.d/default.conf
-Copy nginx.conf /etc/nginx/conf.d/sanju900.txt
+Copy nginx.conf /etc/nginx/conf.d/sanju800.txt
 
 EXPOSE 80
 
