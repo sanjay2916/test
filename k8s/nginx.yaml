@@ -13,8 +13,8 @@ spec:
     spec:
       containers:
       - name: nginx
-        #image: 834406757853.dkr.ecr.ap-south-1.amazonaws.com/test:latest
-        image: nginx:latest
+        image: 834406757853.dkr.ecr.ap-south-1.amazonaws.com/test:latest
+        #image: nginx:latest
         imagePullPolicy: Always
         #image: nginx:latest
         ports:
