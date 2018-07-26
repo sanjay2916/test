@@ -5,9 +5,7 @@ metadata:
   labels:
     app: nginx0-deployment
 spec:
-  replicas: 2
-  strategy:
-    type: RollingUpdate
+  replicas: 1
   template:
     metadata:
       labels:
@@ -18,6 +16,6 @@ spec:
         image: 834406757853.dkr.ecr.ap-south-1.amazonaws.com/test:$(cat version/number)
         #image: 834406757853.dkr.ecr.ap-south-1.amazonaws.com/test:0.0.36
         #imagePullPolicy: Always
-        #image: nginx:latest
+        image: nginx:latest
         ports:
         - containerPort: 80
