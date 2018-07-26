@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: 834406757853.dkr.ecr.ap-south-1.amazonaws.com/test:$(cat version/number)
+        image: 834406757853.dkr.ecr.ap-south-1.amazonaws.com/test:${VERSION}
         #image: 834406757853.dkr.ecr.ap-south-1.amazonaws.com/test:0.0.36
         #imagePullPolicy: Always
         #image: nginx:latest
