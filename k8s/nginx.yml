@@ -15,6 +15,7 @@ spec:
       - name: nginx
         image: 834406757853.dkr.ecr.ap-south-1.amazonaws.com/test:${VERSION}
         #image: 834406757853.dkr.ecr.ap-south-1.amazonaws.com/test:0.0.36
+        #image:
         #imagePullPolicy: Always
         #image: nginx:latest
         ports:
