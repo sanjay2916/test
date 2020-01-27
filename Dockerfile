@@ -91,6 +91,7 @@ RUN set -x \
 # forward request and error logs to docker log collector
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 	&& ln -sf /dev/stderr /var/log/nginx/error.log
+RUN apt update && apt install net-tools && apt install curl 
 
 EXPOSE 80
 EXPOSE 8090
